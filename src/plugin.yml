@@ -1,0 +1,14 @@
+name: PlayerPressure
+main: com.twosquaredstudios.PlayerPressure.PlayerPressure
+version: 0.1
+author: James Clarke (jrtc27)
+website: http://2squaredstudios.com/
+description: Allows pressure plates to be triggered only by players.
+permissions:
+    playerpressure.*:
+        description: Gives access to all PlayerPressure commands.
+        children:
+            playerpressure.create: true
+    playerpressure.create:
+        default: op
+        description: Allows a user to turn a stone pressure plate into one only triggered by players.
