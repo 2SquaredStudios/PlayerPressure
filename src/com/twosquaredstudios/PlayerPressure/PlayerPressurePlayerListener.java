@@ -21,7 +21,8 @@ public class PlayerPressurePlayerListener extends PlayerListener {
 		if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK) && event.getClickedBlock().getType().equals(Material.STONE_PLATE)) {
 			if (plugin.getPlayerPressureConfig().isInPlatesList(event.getClickedBlock().getLocation())) {
 				if (event.getPlayer().hasPermission("playerpressure.create")) {
-					event.getPlayer().sendMessage("Plate is already only triggered by players.");
+					plugin.getPlayerPressureConfig().removeFromPlatesList(event.getClickedBlock().getLocation());
+					event.getPlayer().sendMessage("Plate will now be triggered by any entity.");
 					event.setCancelled(true);
 				} else {
 					event.getPlayer().sendMessage(ChatColor.RED + "You do not have permission to make a pressure plate triggered only by players.");

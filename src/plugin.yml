@@ -1,6 +1,6 @@
 name: PlayerPressure
 main: com.twosquaredstudios.PlayerPressure.PlayerPressure
-version: 0.1
+version: 1.0
 author: James Clarke (jrtc27)
 website: http://2squaredstudios.com/
 description: Allows pressure plates to be triggered only by players.
